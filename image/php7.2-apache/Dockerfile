@@ -18,10 +18,9 @@ RUN unzip Archive.zip
 RUN rm Archive.zip
 
 WORKDIR /var/www/
-RUN git clone https://github.com/bsisic/PolnPy.git
-RUN mv PolnPy/Backend/polnpy .
+RUN git clone https://github.com/PolnPy/PolnPy-Backend.git
 RUN rm -Rf html
-RUN mv polnpy html
+RUN mv PolnPy-Backend html
 
 WORKDIR /var/www/html
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
